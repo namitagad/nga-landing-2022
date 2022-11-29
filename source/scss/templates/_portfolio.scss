@@ -1,138 +1,105 @@
-.portfolio-work {
-	padding: 80px 0;
+/*=================================================================
+  Portfolio section
+==================================================================*/
+.portfolio-filter {
+  margin-bottom: 20px;
+  text-align: center;
 
-	.block {
-		.portfolio-menu {
-			text-align: center;
+  button {
+    border: none;
+    outline: none;
+    border: 1px solid $border-color;
+    background: transparent;
+    display: inline-block;
+    font-size: 16px;
+    padding: 6px 20px;
+    font-weight: 700;
+    color: #737f8a;
+    transition: .3s all;
 
-			.btn-group {
-				margin-bottom: 40px;
-				@include desktop {
-					display: block;
-				}
+    &.active {
+      border: 1px solid $primary-color;
+      color: $primary-color;
+    }
+  }
 
-				label {
-					display: inline-block;
-					border: 1px solid $border-color;
-					padding: 8px 25px;
-					cursor: pointer;
-					font-size: 15px;
-					color: #333333;
-					outline: 0;
-					background: $light;
-					margin: 3px 2px;
-					border-radius: 0;
-					@include transition (all, 0.3s, ease);
-					
-					&.active {
-						background-color: $primary-color;
-						border-color: $primary-color;
-						color: $light;
-					}
-				}
-			}
-		}
-	}
 }
 
-.portfolio {
-	&-item {
-		position: relative;
-		padding: 0;
-
-		img {
-			width: 100%;
-			height: auto;
-		}
-
-		&:hover {
-			.portfolio-hover {
-				visibility: visible;
-				opacity: 1;
-			}
-
-			.portfolio-content {
-				transform: translateY(-50%);
-			}
-		}
-	}
-
-	&-hover {
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		top: 0;
-		left: 0;
-		background: rgba(60, 55, 55, 0.5);
-		visibility: hidden;
-		opacity: 0;
-		transition: .3s ease;
-	}
-
-	&-content {
-		position: absolute;
-		left: 0;
-		right: 0;
-		top: 50%;
-		transform: translateY(-40%);
-		text-align: center;
-		padding: 20px;
-		transition: inherit;
-
-		* {
-			color: $light;
-		}
-
-		a {
-			display: block;
-			transition: .2s ease;
-			&:hover {
-				color: $light;
-				opacity: .8;
-			}
-
-			i {
-				font-size: 30px;
-			}
-
-			&.h3 {
-				margin-top: 0;
-			}
-		}
-	}
+.portfolio-items-wrapper {
+  .mix {
+    padding: 5px;
+  }
 }
 
+.portfolio-block {
+  position: relative;
+  margin-top: 30px;
 
+  &:before {
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: rgb(255, 255, 255);
+    opacity: 0;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    position: absolute;
+    content: '';
+  }
 
+  img {
+    width: 100%;
+    height: auto;
+  }
 
-// Portfolio Single Page
-.portfolio-single-page {
-	.project-details {
-		h4 {
-			margin-bottom: 20px;
-			padding-bottom: 10px;
-			border-bottom: 2px dashed $border-color;
-		}
+  &:hover:before {
+    opacity: 1;
+  }
 
-		span {
-			color: #838383;
-			width: 180px;
-			display: inline-block;
-		}
+  &:hover .caption h4 {
+    top: 45%;
+  }
 
-		strong {
-			color: #313131;
-			font-weight: normal;
-		}
+  &:hover .caption {
+    opacity: 1;
+    top: 50%;
+  }
 
-		ul {
-			li {
-				margin-bottom: 10px;
-			}
-		}
-	}
-}
+  .caption {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    width: 80%;
 
-.portfolio-single-slider {
-	cursor: grab;
+    h4 {
+      font-size: 16px;
+      font-weight: 600;
+
+      a {
+        color: #555;
+      }
+    }
+
+    .search-icon {
+      background: $primary-color;
+      width: 45px;
+      height: 45px;
+      color: $light;
+      display: inline-block;
+      font-size: 20px;
+      border-radius: 30px;
+      margin-bottom: 20px;
+
+      i {
+        line-height: 45px;
+      }
+    }
+  }
 }

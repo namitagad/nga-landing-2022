@@ -1,37 +1,21 @@
-/*--
-	Header Start 
---*/
-header {
-	background: #fff;
-	padding: 20px 0;
-
-	.navbar {
-		margin-bottom: 0px;
-		border: 0px;
-	}
-
-	.navbar-brand {
-		padding-top: 5px;
-	}
-
-	.navbar-default {
-		background: none;
-		border: 0px;
-
-		.navbar-nav {
-			padding-top: 10px;
-
-			li {
-				a {
-					color: #333333;
-					padding: 10px 26px;
-					font-size: 15px;
-
-					&:hover {
-						color: #000;
-					}
-				}
-			}
-		}
+.logo {
+	margin-top: 10px;
+	display: inline-block;
+}
+.single-page-header {
+	background-image: url('../images/about/about-header.jpg');
+	background-size: cover;
+	padding:140px 0 70px;
+	text-align: center;
+	color:$light;
+	position: relative;
+	&:before {
+		background: rgba(0, 0, 0, 0.5);
+		position: absolute;
+		content: '';
+		top:0;
+		right:0;
+		left:0;
+		bottom:0;
 	}
 }

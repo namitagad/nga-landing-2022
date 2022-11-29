@@ -1,51 +1,51 @@
 /*=================================================================
   Pricing section
 ==================================================================*/
+.price-item {
+  border: 1px solid $border-color;
+  padding-bottom: 30px;
+  margin: 15px 0;
+}
 
-.pricing-table {
-  .pricing-item {
-    padding: 40px 20px;
-    background: $light;
-    box-shadow: 0 8px 15px 0 rgba(5, 57, 106, .06);
+.price-title {
+  background-color: $section-bg;
+  padding: 30px 0 20px;
 
-    a.btn-main {
-      text-transform: uppercase;
-      margin-top: 20px;
-    }
-
-    li {
-      font-weight: 400;
-      padding: 6px 0;
-      color: #666;
-
-      i {
-        margin-right: 6px;
-        color: $primary-color;
-      }
-    }
+  h3 {
+    color: $primary-color;
+    margin: 0 0 10px;
+    text-transform: uppercase;
   }
 
-  .price-title {
-    padding: 30px 0 20px;
+  p {
+    font-size: 18px;
+    font-weight: 400;
+  }
 
-    >h3 {
-      font-weight: 700;
-      margin: 0 0 5px;
-      font-size: 15px;
-      text-transform: uppercase;
-    }
+  .value {
+    color: $primary-color;
+    font-size: 30px;
+  }
+}
 
-    >p {
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 18px;
-      margin-top: 5px;
-    }
 
-    .value {
-      color: $primary-color;
-      font-size: 50px;
-      padding: 10px 0;
-    }
+
+
+
+.pricing li {
+  padding: 10px 0;
+
+  &:last-child {
+    border-bottom: 1px solid$border-color;
+    margin-bottom: 20px;
+  }
+
+  &:nth-child(2n) {
+    background-color: $section-bg;
+  }
+
+  .btn {
+    text-transform: uppercase;
+    margin: 20px 0;
   }
 }

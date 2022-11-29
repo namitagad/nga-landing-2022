@@ -1,91 +1,49 @@
-$(document).ready(function () {
+(function ($) {
 	'use strict';
 
-	// navbarDropdown
-	if ($(window).width() < 992) {
-		$('.navigation .dropdown-toggle').on('click', function () {
-			$(this).siblings('.dropdown-menu').animate({
-				height: 'toggle'
-			}, 300);
-		});
-	}
+	/* ========================================================================= */
+	/*	Page Preloader
+	/* ========================================================================= */
 
-	$(window).on('scroll', function () {
-		//.Scroll to top show/hide
-		if ($('#scroll-to-top').length) {
-			var scrollToTop = $('#scroll-to-top'),
-				scroll = $(window).scrollTop();
-			if (scroll >= 200) {
-				scrollToTop.fadeIn(200);
-			} else {
-				scrollToTop.fadeOut(100);
-			}
+	$(window).on('load', function () {
+		// preloader
+		$('.preloader').fadeOut(700);
+
+		// Portfolio Filtering
+		var containerEl = document.querySelector('.filtr-container');
+		var filterizd;
+		if (containerEl) {
+			filterizd = $('.filtr-container').filterizr({});
 		}
+		//Active changer
+		$('.portfolio-filter button').on('click', function () {
+			$('.portfolio-filter button').removeClass('active');
+			$(this).addClass('active');
+		});
 	});
-	// scroll-to-top
-	if ($('#scroll-to-top').length) {
-		$('#scroll-to-top').on('click', function () {
-			$('body,html').animate({
-				scrollTop: 0
-			}, 600);
-			return false;
-		});
-	}
 
-	// Shuffle js filter and masonry
-	var containerEl = document.querySelector('.shuffle-wrapper');
-	if (containerEl) {
-		var Shuffle = window.Shuffle;
-		var myShuffle = new Shuffle(document.querySelector('.shuffle-wrapper'), {
-			itemSelector: '.shuffle-item',
-			buffer: 1
-		});
-
-		jQuery('input[name="shuffle-filter"]').on('change', function (evt) {
-			var input = evt.currentTarget;
-			if (input.checked) {
-				myShuffle.filter(input.value);
-			}
-		});
-	}
-
-	$('.portfolio-single-slider').slick({
+	/* ========================================================================= */
+	/*	Post image slider
+	/* ========================================================================= */
+	$('#post-thumb, #gallery-post').slick({
 		infinite: true,
 		arrows: false,
 		autoplay: true,
-		autoplaySpeed: 2000
-	});
+		autoplaySpeed: 4000
 
-	$('.clients-logo').slick({
+	});
+	$('#features').slick({
 		infinite: true,
 		arrows: false,
 		autoplay: true,
-		autoplaySpeed: 2000
-	});
-
-	$('.testimonial-slider').slick({
-		slidesToShow: 1,
-		infinite: true,
-		arrows: false,
-		autoplay: true,
-		autoplaySpeed: 2000
+		autoplaySpeed: 4000
 	});
 
 
-	// CountDown JS
-	var countDownEl = $('.count-down');
-	if (countDownEl) {
-		$('.count-down').syotimer({
-			year: 2021,
-			month: 5,
-			day: 9,
-			hour: 20,
-			minute: 30
-		});
-	}
-
-	// Magnific Popup Image
-	$('.portfolio-popup').magnificPopup({
+	/* ========================================================================= */
+	/*	Magnific popup
+	/* =========================================================================  */
+	$('.image-popup').magnificPopup({
 		type: 'image',
 		removalDelay: 160, //delay removal by X to allow out-animation
 		callbacks: {
@@ -97,18 +55,19 @@ $(document).ready(function () {
 		},
 		closeOnContentClick: true,
 		midClick: true,
-		fixedContentPos: true,
+		fixedContentPos: false,
 		fixedBgPos: true
 	});
 
-	//  Count Up
+
+	// counterUp
 	function counter() {
 		var oTop;
-		if ($('.count').length !== 0) {
-			oTop = $('.count').offset().top - window.innerHeight;
+		if ($('.jsCounter').length !== 0) {
+			oTop = $('.jsCounter').offset().top - window.innerHeight;
 		}
 		if ($(window).scrollTop() > oTop) {
-			$('.count').each(function () {
+			$('.jsCounter').each(function () {
 				var $this = $(this),
 					countTo = $this.attr('data-count');
 				$({
@@ -116,7 +75,7 @@ $(document).ready(function () {
 				}).animate({
 					countNum: countTo
 				}, {
-					duration: 1000,
+					duration: 500,
 					easing: 'swing',
 					step: function () {
 						$this.text(Math.floor(this.countNum));
@@ -128,8 +87,71 @@ $(document).ready(function () {
 			});
 		}
 	}
+
 	$(window).on('scroll', function () {
 		counter();
 	});
 
+
+
+	//   magnific popup video
+	$('.popup-video').magnificPopup({
+		disableOn: 700,
+		type: 'iframe',
+		mainClass: 'mfp-zoom-in',
+		removalDelay: 160,
+		preloader: false,
+		fixedContentPos: true
+	});
+
+	/* ========================================================================= */
+	/*	Testimonial Carousel
+	/* =========================================================================  */
+	//Init the carousel
+	$('#testimonials').slick({
+		infinite: true,
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 4000
+	});
+
+
+	/* ========================================================================= */
+	/*	Smooth Scroll
+	/* ========================================================================= */
+	$('a.nav-link, .smooth-scroll').click(function (e) {
+		if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			if (target.length) {
+				e.preventDefault();
+				$('html, body').animate({
+					scrollTop: target.offset().top
+				}, 1000, function () {
+					var $target = $(target);
+					$target.focus();
+					if ($target.is(':focus')) {
+						return false;
+					} else {
+						$target.attr('tabindex', '-1');
+						$target.focus();
+					}
+				});
+			}
+		}
+	});
+
+
+})(jQuery);
+// End Jquery Function
+
+
+/* ========================================================================= */
+/*	Animated section
+/* ========================================================================= */
+
+var wow = new WOW({
+	offset: 100, // distance to the element when triggering the animation (default is 0)
+	mobile: false // trigger animations on mobile devices (default is true)
 });
+wow.init();

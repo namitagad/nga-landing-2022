@@ -1,43 +1,20 @@
-# Airspace By Themefisher
+# Meghna By Themefisher
 
-Airspace is a clean, unique, and free bootstrap website template. The template is built with refined business as well as corporate elements and saturated with rich typography, allowing to convey a perfect message to the first visit according to the niche motto.
+Meghna is a free responsive one-page business template built with HTML5/CSS3, JavaScript and JQuery. The HTML template is minimalist, lightweight and fast loading, and has been shipped wrapping the latest technologies and awesome design trends.
 
 <!-- demo -->
 ## Example Site
 
-| [![](screenshots/homepage.png)](https://demo.themefisher.com/themefisher/airspace/) | [![](screenshots/about.png)](https://demo.themefisher.com/themefisher/airspace/about.html) | [![](screenshots/service.png)](https://demo.themefisher.com/themefisher/airspace/service.html) |
+| [![](screenshots/homepage.png)](https://demo.themefisher.com/meghna/) | [![](screenshots/blog.png)](https://demo.themefisher.com/meghna/blog.html) | [![](screenshots/blog-details.png)](https://demo.themefisher.com/meghna/blog-single.html) |
 |:---:|:---:|:---:|
-| **Homepage**  | **About**  | **Service**  |
-| [![](screenshots/portfolio.png)](https://demo.themefisher.com/themefisher/airspace/portfolio.html) | [![](screenshots/pricing.png)](https://demo.themefisher.com/themefisher/airspace/pricing.html) | [![](screenshots/blog-r.png)](https://demo.themefisher.com/themefisher/airspace/blog-right-sidebar.html) |
-| **Portfolio** | **Pricing** | **Blogs** |
-| [![](screenshots/contact.png)](https://demo.themefisher.com/themefisher/airspace/contact.html) | [![](screenshots/soon.png)](https://demo.themefisher.com/themefisher/airspace/coming-soon.html) | [![](screenshots/404.png)](https://demo.themefisher.com/themefisher/airspace/404.html) |
-| **Contact** | **Coming Soon** | **404** |
+| **Homepage**  | **Blogs**  | **Blog Details**  |
 
-👉🏻[View Live Preview](https://demo.themefisher.com/themefisher/airspace/)
-
-<!-- resources -->
-## Pages
-
-* **Homepage**
-* **About**
-* **Service**
-* **Portfolio**
-* **Portfolio Dingle**
-* **Pricing**
-* **Blog Grid**
-* **Blog Full Width**
-* **Blog Left Sidebar**
-* **Blog Right Sidebar**
-* **Blog Single**
-* **Contact**
-* **FAQ**
-* **404**
-* **Coming Soon**
+👉🏻[View Live Preview](https://demo.themefisher.com/meghna/)
 
 <!-- download -->
 ## Download And installation
 
-Download this template from [Github](https://github.com/themefisher/airspace/archive/main.zip)
+Download this template from [Github](https://github.com/themefisher/meghna/archive/main.zip)
 
 <!-- installation -->
 ### Basic Usages
@@ -87,13 +64,13 @@ npm run build
 
 Now you get a `theme` folder that has all the changes you have made. you can use this folder as your main theme.
 
-👉🏻 [visit documentation](https://docs.themefisher.com/airspace/)
+👉🏻 [visit documentation](https://docs.themefisher.com/meghna/)
 
 <!-- reporting issue -->
 ## Reporting Issues
 
-We use GitHub Issues as the official bug tracker for the Airspace Template. Please Search [existing issues](https://github.com/themefisher/airspace/issues). Someone may have already reported the same problem.
-If your problem or idea has not been addressed yet, feel free to [open a new issue](https://github.com/themefisher/airspace/issues).
+We use GitHub Issues as the official bug tracker for the Meghna Template. Please Search [existing issues](https://github.com/themefisher/meghna/issues). Someone may have already reported the same problem.
+If your problem or idea has not been addressed yet, feel free to [open a new issue](https://github.com/themefisher/meghna/issues).
 
 <!-- support -->
 ## Technical Support or Questions (Paid)
@@ -105,7 +82,7 @@ If you have questions or need help integrating the product please [contact us](m
 
 Copyright (c) 2016 - Present, Designed & Developed by [Themefisher](https://themefisher.com)
 
-**Code License:** Released under the [MIT](https://github.com/themefisher/airspace/blob/main/LICENSE) license.
+**Code License:** Released under the [MIT](https://github.com/themefisher/meghna/blob/main/LICENSE) license.
 
 **Image license:** The images are only for demonstration purposes. They have their license, we don't have permission to share those images.
 
@@ -116,10 +93,8 @@ Some third-party plugins that we used to build this template. Please check their
 
 * **Bootstrap v4.5**: <https://getbootstrap.com/docs/4.5/getting-started/introduction/>
 * **Jquery v3.5.1**: <https://jquery.com/download/>
-* **Ionicons Icons v2.0**: <https://ionicons.com/v2/>
 * **Google Fonts**: <http://fonts.google.com/>
 * **Animate CSS**: <https://animate.style/>
 * **Magnific Popup**: <https://dimsemenov.com/plugins/magnific-popup/>
-* **Slick**: <https://kenwheeler.github.io/slick/>
-* **Shuffle**: <https://vestride.github.io/Shuffle/>
-* **SyoTimer**: <http://syomochkin.xyz/folio/syotimer/demo.html>
+* **Filterizr**: <https://yiotis.net/filterizr/>
+* **WOW js**: <https://wowjs.uk/>
