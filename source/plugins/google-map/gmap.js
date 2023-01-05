@@ -4,7 +4,7 @@ function initialize() {
   var map;
   var latitude = $('#map_canvas').attr('data-latitude');
   var longitude = $('#map_canvas').attr('data-longitude');
-  var nottingham = new google.maps.LatLng(latitude, longitude);
+  var nottingham = new google.maps.LatLng(9.1007959, 72.9170651);
   var style = [{
 		'featureType': 'landscape',
 		'elementType': 'geometry.fill',
