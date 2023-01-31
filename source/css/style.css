@@ -271,7 +271,7 @@ a:hover {
 }
 
 .section-sm {
-  padding: 70px 0;
+  padding: 30px 0;
 }
 
 .section-xs {
@@ -963,8 +963,8 @@ a:hover {
   content: "";
 }
 .portfolio-block img {
-  width: 100%;
-  height: auto;
+  width: 1000px;
+  height: 750px;
 }
 .portfolio-block:hover:before {
   opacity: 1;
